@@ -407,9 +407,12 @@ def _stage_2(
     # Compute R2 scores within each sample block for each outcome + alpha
     R2 = da.stack(
         [
-            r2_score(YR.blocks[..., i], Y.T.blocks[..., i])
-            # Avoid warnings on R2 calculations for blocks with single rows
-            if YR.chunks[-1][i] > 1 else da.full(YR.shape[:-1], np.nan)
+            (
+                r2_score(YR.blocks[..., i], Y.T.blocks[..., i])
+                # Avoid warnings on R2 calculations for blocks with single rows
+                if YR.chunks[-1][i] > 1
+                else da.full(YR.shape[:-1], np.nan)
+            )
             for i in range(n_sample_block)
         ]
     )

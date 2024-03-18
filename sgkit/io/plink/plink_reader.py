@@ -1,4 +1,5 @@
 """PLINK 1.9 reader implementation"""
+
 from pathlib import Path
 from typing import Any, Dict, List, MutableMapping, Optional, Tuple, Union
 

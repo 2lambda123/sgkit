@@ -1,4 +1,5 @@
 """Benchmark suite for PLINK module."""
+
 import tempfile
 import time
 from pathlib import Path
