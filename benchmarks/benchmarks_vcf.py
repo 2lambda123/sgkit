@@ -1,4 +1,5 @@
 """Benchmark suite for VCF module."""
+
 import gzip
 import os
 import shutil

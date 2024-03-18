@@ -928,9 +928,9 @@ def test_hybrid_inverse_relationship__AGHmatrix(n, tau, omega, share_dims):
         "samples_1",
     ], np.full_like(A, np.nan)
     A22 = A.values[genomic_sample, :][:, genomic_sample]
-    ds.pedigree_subset_inverse_relationship[
-        genomic_sample, genomic_sample
-    ] = np.linalg.inv(A22)
+    ds.pedigree_subset_inverse_relationship[genomic_sample, genomic_sample] = (
+        np.linalg.inv(A22)
+    )
     ds["genomic_sample"] = "samples", genomic_sample
     actual = sg.hybrid_inverse_relationship(
         ds,

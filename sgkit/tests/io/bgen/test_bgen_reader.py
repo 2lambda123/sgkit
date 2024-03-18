@@ -285,9 +285,11 @@ def test_bgen_to_zarr(shared_datadir, tmp_path, region):
     output = tmp_path / "example.zarr"
     ds = bgen_to_zarr(input, output, region=region)
     expected_dims = {
-        k: EXPECTED_DIMS[k]
-        if region is None or k not in region
-        else region[k].stop - region[k].start
+        k: (
+            EXPECTED_DIMS[k]
+            if region is None or k not in region
+            else region[k].stop - region[k].start
+        )
         for k in EXPECTED_DIMS
     }
     actual_dims = {k: v for k, v in ds.dims.items() if k in expected_dims}

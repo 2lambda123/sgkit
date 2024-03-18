@@ -1,4 +1,5 @@
 """BGEN reader implementation (using bgen_reader)"""
+
 import logging
 import tempfile
 import time
