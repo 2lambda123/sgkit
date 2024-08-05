@@ -3,6 +3,7 @@
 The implementation follows the [Tabix index file format](https://samtools.github.io/hts-specs/tabix.pdf).
 
 """
+
 from dataclasses import dataclass
 from typing import Any, Dict, Optional, Sequence
 

@@ -4,6 +4,7 @@ This extension is taken directly from scanpy here:
 
 to fix this issue: https://github.com/theislab/scanpydoc/issues/7
 """
+
 import re
 from typing import Iterator, List
 
