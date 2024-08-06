@@ -3,6 +3,7 @@
 Many functions in this module take a bytes buffer argument, ``buf``, which should be a NumPy array of type ``uint8``,
 and an integer index into the buffer, ``p``.
 """
+
 import numpy as np
 
 from sgkit.accelerate import numba_jit

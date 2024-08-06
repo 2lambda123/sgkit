@@ -3,6 +3,7 @@
 The implementation follows the [CSI index file format](http://samtools.github.io/hts-specs/CSIv1.pdf).
 
 """
+
 from dataclasses import dataclass
 from typing import Any, Dict, Optional, Sequence
 
