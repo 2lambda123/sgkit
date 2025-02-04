@@ -13,6 +13,7 @@ from .typing import ArrayLike, DType
 
 class DimensionWarning(UserWarning):
     "Warning about dimension mismatches."
+
     pass
 
 

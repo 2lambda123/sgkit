@@ -327,7 +327,7 @@ def test_convert_probability_to_call(chunks: int, dtype: str) -> None:
     ],
 )
 def test_convert_probability_to_call__threshold(
-    case: Tuple[int, List[List[int]]]
+    case: Tuple[int, List[List[int]]],
 ) -> None:
     threshold, expected = case
     ds = simulate_dataset(

@@ -87,7 +87,7 @@ def index_array_blocks(
 
 
 def index_block_sizes(
-    sizes: Union[ArrayLike, Sequence[int]]
+    sizes: Union[ArrayLike, Sequence[int]],
 ) -> Tuple[NDArray, NDArray]:
     """Generate indexes for blocks of specific sizes.
 
